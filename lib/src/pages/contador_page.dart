@@ -38,17 +38,21 @@ class _ContadorPageState extends State<ContadorPage>  {
             mainAxisAlignment: MainAxisAlignment.center,
           ),
         ),
-        floatingActionButton: FloatingActionButton(
-          child: Icon(Icons.add),
-          onPressed: (){
-            print('hola mundo');
-            _contar++;
-            setState(() {
-              
-            });
-          }
-          ),
+        floatingActionButton: crearBoton(),
           floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
         );
+  }
+
+  Widget crearBoton(){
+    return Row(
+      children: <Widget>[
+        SizedBox(width: 10.0,),
+        FloatingActionButton(child: Icon(Icons.add), onPressed: (){}),
+        SizedBox(width: 10.0,),
+        FloatingActionButton(child: Icon(Icons.remove), onPressed: (){}),
+        SizedBox(width: 10.0,),
+        FloatingActionButton(child: Icon(Icons.exposure_zero), onPressed: (){})
+      ],
+    );
   }
 }
