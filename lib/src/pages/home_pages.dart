@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
   final tamanio = new TextStyle(fontSize: 25);
+  final conte = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +22,7 @@ class HomePage extends StatelessWidget {
                 style: tamanio,
               ),
               Text(
-                '0',
+                'conteo',
                 style: tamanio,
               )
             ],
