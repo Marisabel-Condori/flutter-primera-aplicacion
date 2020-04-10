@@ -7,8 +7,6 @@ class ContadorPage extends StatefulWidget {
   }
 }
 
-
-
 class _ContadorPageState extends State<ContadorPage>  {
 
   final _tamanio = new TextStyle(fontSize: 25);
@@ -47,12 +45,24 @@ class _ContadorPageState extends State<ContadorPage>  {
     return Row(
       children: <Widget>[
         SizedBox(width: 10.0,),
-        FloatingActionButton(child: Icon(Icons.add), onPressed: (){}),
+        FloatingActionButton(child: Icon(Icons.add), onPressed: _aumentaContador),
         SizedBox(width: 10.0,),
-        FloatingActionButton(child: Icon(Icons.remove), onPressed: (){}),
+        FloatingActionButton(child: Icon(Icons.remove), onPressed: _disminuyeContador),
         SizedBox(width: 10.0,),
-        FloatingActionButton(child: Icon(Icons.exposure_zero), onPressed: (){})
+        FloatingActionButton(child: Icon(Icons.exposure_zero), onPressed: _cero ),
       ],
     );
+  }
+
+  void _aumentaContador(){
+    setState(() => _contar++);
+  }
+
+  void _disminuyeContador(){
+    setState(() =>  _contar--);
+  }
+
+  void _cero(){
+    setState(() =>_contar = 0);
   }
 }
